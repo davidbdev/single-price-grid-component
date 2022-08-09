@@ -1,0 +1,407 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---- Desktop CSS ---- */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    color: #4A4A4A;
+    line-height: 1.4;
+}
+
+h3 {
+    font-family: 'PT Serif', serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #1e90ff;
+    margin-bottom: 0.3em;
+}
+
+#page-wrapper {
+    position: absolute;
+    background-color: #ede7e3;
+    width: 100%;
+    height: 100%;
+}
+
+#price-list {
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr 2fr 1fr;
+    position: absolute;
+    background-color: #ede7e3;
+    width: 100%;
+    height: 100%;
+}
+
+.text-subheader {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffa62b;
+    margin-bottom: 2em;
+}
+
+.subsection-header-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ede7e3;
+}
+
+.price-amount {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ede7e3;
+}
+
+.text-accent {
+    font-size: 0.5em;
+    font-weight: bold;
+    color: #1eAeff;
+}
+
+.light-text {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #ede7e3;
+}
+
+.whyus-list {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ede7e3;
+
+    list-style: disc;
+
+    margin-top: 1em;
+}
+
+.price-component {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.price-component:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.price-comp-intro {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+
+    border-radius: 10px 10px 0px 0px;
+    background-color: #f8f7ff;
+
+    padding: 3em;
+}
+
+.price-comp-cta {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    background-color: #1e90ff;
+    display: grid;
+
+    border-radius: 0px 0px 0px 10px;
+    padding: 2em 4em;
+}
+
+.subscribe-button {
+    margin: auto;
+    border: none;
+    width: 8em;
+    height: 2em;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+
+    border-radius: 10px;
+    background: linear-gradient(to left, #ff860b 50%, #ffa62b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease;
+}
+
+.subscribe-button:hover {
+    background-position: left bottom;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.price-comp-whyus {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: #1eAeff;
+
+    border-radius: 0px 0px 10px 0px;
+    padding: 2em 3em;
+}
+
+/* ---- Media Queries ---- */
+@media (min-width: 1251px) and (max-width: 1500px) {
+    h3 {
+        font-size: 2.5em;
+        margin-bottom: 0.3em;
+    }
+    .price-comp-intro {
+        padding: 2em;
+    }
+    .price-comp-cta {
+        padding: 1em 2em;
+    }
+    .price-comp-whyus {
+        padding: 1em 2em;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1250px) {
+    p {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+    .text-subheader {
+        font-size: 1.25em;
+        margin-bottom: 1.25em;
+    }
+    .subsection-header-text {
+        font-size: 1.25em;
+    }
+    .price-amount {
+        font-size: 2em;
+    }
+
+    #price-list {
+        grid-template: 1fr 2fr 1fr / 1fr 2fr 1fr;
+    }
+    .price-component {
+        grid-template: 1fr 1fr 1fr / 1fr;
+    
+    }
+    .price-comp-intro {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    
+        padding: 1em 4em;
+    }
+    .price-comp-cta {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    
+        background-color: #1e90ff;
+        display: grid;
+    
+        border-radius: 0px 0px 10px 10px;
+        padding: 1em 6em;
+    }    
+    .price-comp-whyus {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+
+        border-radius: 0px;
+        padding: 1em 6em;
+    }
+}
+
+@media (min-width: 851px) and (max-width: 1100px) {
+    p {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+    .text-subheader {
+        font-size: 1.2em;
+        margin-bottom: 1.25em;
+    }
+    .subsection-header-text {
+        font-size: 1.2em;
+    }
+    .price-amount {
+        font-size: 1.5em;
+    }
+
+    #price-list {
+        grid-template: 1fr 3fr 1fr / 1fr 3fr 1fr;
+    }
+    .price-component {
+        grid-template: 1fr 1fr 1fr / 1fr;
+    
+    }
+    .price-comp-intro {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        
+        padding: 1em 4em;
+    }
+    .price-comp-cta {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    
+        display: grid;
+    
+        border-radius: 0px 0px 10px 10px;
+        padding: 1em 6em;
+    }    
+    .price-comp-whyus {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    
+        border-radius: 0px;
+        padding: 1em 6em;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 850px) {
+    p {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+    .text-subheader {
+        font-size: 1.2em;
+        margin-bottom: 1.25em;
+    }
+    .subsection-header-text {
+        font-size: 1.2em;
+    }
+    .price-amount {
+        font-size: 1.5em;
+    }
+
+    #price-list {
+        grid-template: 1fr 3fr 1fr / 1fr 3fr 1fr;
+    }
+    .price-component {
+        grid-template: 1fr 1fr 1fr / 1fr;
+    
+    }
+    .price-comp-intro {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        
+        padding: 1em 2em;
+    }
+    .price-comp-cta {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    
+        display: grid;
+    
+        border-radius: 0px 0px 10px 10px;
+        padding: 1em 3em;
+    }    
+    .price-comp-whyus {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    
+        border-radius: 0px;
+        padding: 1em 3em;
+    }
+}
+
+@media (max-width: 650px) {
+    p {
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+    .text-subheader {
+        font-size: 1.2em;
+        margin-bottom: 1.25em;
+    }
+    .subsection-header-text {
+        font-size: 1.2em;
+    }
+    .price-amount {
+        font-size: 1.5em;
+    }
+
+    #price-list {
+        grid-template: 1fr / 1fr;
+        position: relative;
+    }
+    .price-component {
+        grid-template: 1fr 1fr 1fr / 1fr;
+    
+    }
+    .price-comp-cta {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    
+        display: grid;
+    
+        border-radius: 0px;
+        padding: 1em 3em;
+    }    
+    .price-comp-whyus {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    
+        border-radius: 0px;
+        padding: 1em 3em;
+    }
+}
